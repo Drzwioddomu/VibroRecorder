@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C0D8DA"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:text="@string/app_name"
+        android:textAlignment="center"
+        android:textColor="#90000000"
+        android:textColorHint="#16FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.08" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:contentDescription="@string/logo_image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.08"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        app:srcCompat="@mipmap/ic_logo" />
+
+    <EditText
+        android:id="@+id/patientID"
+        android:hint="@string/ID_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:text="@string/patient_id"
+        android:textColor="#90000000"
+        app:layout_constraintBottom_toTopOf="@+id/recButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <ToggleButton
+        android:id="@+id/recButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/ic_roundbutton"
+        android:textOff="@string/rec_button_off"
+        android:textOn="@string/rec_button_on"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:layout_constraintVertical_bias="0.39" />
+
+    <TextView
+        android:id="@+id/timeView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/timeview_default_value"
+        android:textAlignment="center"
+        android:textColor="#90000000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recButton"
+        app:layout_constraintVertical_bias="0.12" />
+
+    <TextView
+        android:id="@+id/accelViewX"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="textEnd"
+        android:textColor="#90000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recButton"
+        app:layout_constraintVertical_bias="0.469"
+        tools:text="-00.00" />
+
+    <TextView
+        android:id="@+id/accelViewY"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="textEnd"
+        android:textColor="#90000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recButton"
+        app:layout_constraintVertical_bias="0.565"
+        tools:text="-00.00" />
+
+    <TextView
+        android:id="@+id/accelViewZ"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="textEnd"
+        android:textColor="#90000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recButton"
+        app:layout_constraintVertical_bias="0.661"
+        tools:text="-00.00" />
+
+    <TextView
+        android:id="@+id/accelViewLabelX"
+        android:layout_width="15dp"
+        android:layout_height="wrap_content"
+        android:text="X:"
+        android:textAlignment="center"
+        android:textColor="#90000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/accelViewY"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recButton"
+        app:layout_constraintVertical_bias="0.469" />
+
+    <TextView
+        android:id="@+id/accelViewLabelY"
+        android:layout_width="15dp"
+        android:layout_height="wrap_content"
+        android:text="Y:"
+        android:textAlignment="center"
+        android:textColor="#90000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/accelViewY"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recButton"
+        app:layout_constraintVertical_bias="0.565" />
+
+    <TextView
+        android:id="@+id/accelViewLabelZ"
+        android:layout_width="15dp"
+        android:layout_height="wrap_content"
+        android:text="Z:"
+        android:textAlignment="center"
+        android:textColor="#90000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/accelViewY"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recButton"
+        app:layout_constraintVertical_bias="0.661" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

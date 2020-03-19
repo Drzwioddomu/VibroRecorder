@@ -1,0 +1,2 @@
+rootProject.name='VibroRecorder'
+include ':app'
