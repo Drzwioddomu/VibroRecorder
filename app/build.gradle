@@ -13,6 +13,8 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        sourceCompatibility = JavaVersion.VERSION_1_8
     }
 
     buildTypes {
